@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tlapaleria</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background:brown;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Barra lateral de redes sociales */
+    .social {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .social ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social ul li {
+      margin: 15px 0;
+    }
+
+    .social ul li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color:brown;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: #1b2631;
+      font-size: 20px;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .social ul li a:hover {
+      transform: scale(1.2);
+    }
+
+    .reel-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      animation: spin 20s linear infinite;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+
+    .reel-container img {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Posiciones circulares de las imágenes */
+    .img1 { top: 0%; left: 50%; }
+    .img2 { top: 25%; left: 85%; }
+    .img3 { top: 75%; left: 85%; }
+    .img4 { top: 100%; left: 50%; }
+    .img5 { top: 75%; left: 15%; }
+    .img6 { top: 25%; left: 15%; }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .access-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #0056b3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .access-button:hover {
+      background-color: #003f87;
+    }
+
+    /* Menú desplegable */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: grey;
+      color: black;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: grey;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <img src="guichi.png" alt="Tlapaleria" style="width: 350px; height: auto; margin-bottom: 30px;">
+  <div style="overflow: hidden; white-space: nowrap; width: 100%;">
+    <div style="display: inline-block; animation: moverTexto 10s linear infinite; font-size: 20px; color: white;">
+		¡TODO LO QUE NECESITES AL MEJOR PRECIO!
+    </div>
+  </div>
+
+  <style>
+    @keyframes moverTexto {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+
+  <div class="navbar">
+    <div class="dropdown">
+      <a href="#">Somos</a>
+      <div class="dropdown-content">
+        <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Nuestra_H_T.html">Nuestra historia</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Productos</a>
+      <div class="dropdown-content">
+        <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Materiales%20de%20construccion.html">Materiales de construción  </a>
+		   <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Herramientas.html">Herramientas</a>
+		   <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Ferreter%C3%ADa.html">Ferretería</a>
+		   <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Pinturas%20y%20acabados.html">Pinturas y acabados</a>
+		   <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Productos%20de%20J_D.html">Productos para jardinería y decoración</a>
+		   <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Electricidad.html">Electricidad</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Servicio</a>
+      <div class="dropdown-content">
+        <a href="file:///G:/NEW/examen%20nay%20y%20sergio/Servicio.html">Te ofrecemos...</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="social">
+    <ul>
+      <li><a href="https://www.facebook.com/tu_usuario" target="_blank"><img src="facebook.png" alt="Facebook" width="32"></a></li>
+        <li><a href="https://www.instagram.com/tu_usuario" target="_blank"><img src="instagram.png" alt="Instagram" width="32"></a></li>
+        <li><a href="https://whatsapp.com/channel/0029VaDSJYRHrDZXVZRNhm2u" target="_blank"><img src="social.png" alt="WhatsApp" width="32"></a></li>
+        <li><a href="https://www.tiktok.com/@tu_usuario" target="_blank"><img src="tik-tok.png" alt="TikTok" width="32"></a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
+

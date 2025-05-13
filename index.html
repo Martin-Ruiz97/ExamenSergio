@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tlapalería Guicho</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 15px;
+            font-family: sans-serif;
+            background-color: brown;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-top: 10px;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .boton1 {
+            background: white;
+            color: black;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 8px 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 30px; /* Cambiado de 20px a 30px */
+        }
+
+        .boton1:hover {
+            box-shadow: 0 0 20px black;
+            transform: translateY(-5px);
+        }
+
+        .social {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .social li {
+            margin-bottom: 10px;
+        }
+
+        .social li a {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .social li a:hover {
+            transform: scale(1.2);
+        }
+
+        .reel-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .reel-inner {
+      display: flex;
+      width: 1800px; 
+      height: 100%;
+      animation: slide 18s infinite;
+    }
+
+    .reel-inner img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      16% { transform: translateX(0); }
+
+      17% { transform: translateX(-300px); }
+      33% { transform: translateX(-300px); }
+
+      34% { transform: translateX(-600px); }
+      50% { transform: translateX(-600px); }
+
+      51% { transform: translateX(-900px); }
+      67% { transform: translateX(-900px); }
+
+      68% { transform: translateX(-1200px); }
+      83% { transform: translateX(-1200px); }
+
+      84% { transform: translateX(-1500px); }
+      100% { transform: translateX(-1500px); }
+    }
+
+    </style>
+</head>
+<body>
+
+<h1>Tlapalería Guicho</h1>
+<div class="reel-container">
+    <div class="reel-inner">
+            <img src="guicho.png" alt="Foto 1">
+            <img src="1.jpeg" alt="Foto 2">
+            <img src="2.jpeg" alt="Foto 3">
+            <img src="3.jpeg" alt="Foto 4">
+            <img src="4.jpeg"icho alt="Foto 5">
+            <img src="3.jpeg" alt="Foto 6">
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <a href="file:///G:/NEW/examen%20nay%20y%20sergio/P_2_Tlapaler%C3%ADa.html" class="boton1">ACCEDER</a>
+        <ul class="social">
+            <li><a href="https://www.facebook.com/tu_usuario" target="_blank"><img src="facebook.png" alt="Facebook" width="32"></a></li>
+            <li><a href="https://www.instagram.com/tu_usuario" target="_blank"><img src="instagram.png" alt="Instagram" width="32"></a></li>
+            <li><a href="https://whatsapp.com/channel/0029VaDSJYRHrDZXVZRNhm2u" target="_blank"><img src="social.png" alt="WhatsApp" width="32"></a></li>
+            <li><a href="https://www.tiktok.com/@tu_usuario" target="_blank"><img src="tik-tok.png" alt="TikTok" width="32"></a></li>
+        </ul>
+    </div>
+
+    <h3>COBAEH Tianguistengo</h3>
+
+</body>
+</html>
